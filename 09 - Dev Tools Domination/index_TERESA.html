@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    // console.log('regular hi')
+    // // Interpolated
+    // console.log('regular hi %s string', 'po')
+    // // Styled
+    // console.log('%c regular hi %s string', 'font-size: 5em; color: red;')
+    // // warning!
+    // console.warn('WARN')
+    // // Error :|
+    // console.error('error')
+    // Info
+
+    // Testing
+
+    // clearing
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p')
+    console.log(p)
+    console.dir(p)
+    console.clear()
+    // Grouping together
+
+    // counting
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/teresatetens')
+    .then(res =>res.json())
+    .then(data => {
+      console.timeEnd('fetching data')
+      console.log(data);
+    })
+  </script>
+</body>
+</html>
